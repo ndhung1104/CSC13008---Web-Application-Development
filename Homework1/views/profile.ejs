@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= member.name %> — Hồ sơ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <a href="/team" class="btn btn-link mb-4">&larr; Quay lại</a>
+
+  <div class="card shadow-sm">
+    <div class="row g-0">
+      <!-- Left: ảnh + contact -->
+      <div class="col-lg-4 col-md-5 p-4 border-end">
+        <div class="text-center">
+          <img src="<%= member.photo %>" alt="<%= member.name %>" class="rounded-circle mb-3 profile-photo">
+          <h3 class="mb-0"><%= member.name %></h3>
+          <div class="text-muted mb-2"><%= member.role %></div>
+          <div class="mb-3"><small class="text-muted"><%= member.location || '' %></small></div>
+
+          <div class="d-grid gap-2">
+            <% if (member.email) { %>
+              <a class="btn btn-outline-dark btn-sm" href="mailto:<%= member.email %>">Email</a>
+            <% } %>
+            <% if (member.linkedin) { %>
+              <a class="btn btn-outline-dark btn-sm" href="<%= member.linkedin %>" target="_blank" rel="noreferrer">LinkedIn</a>
+            <% } %>
+            <% if (member.github) { %>
+              <a class="btn btn-outline-dark btn-sm" href="<%= member.github %>" target="_blank" rel="noreferrer">GitHub</a>
+            <% } %>
+          </div>
+
+          <hr class="my-4">
+
+          <div>
+            <h6 class="mb-2">Kỹ năng</h6>
+            <% if (member.skills && member.skills.length) { %>
+              <% member.skills.forEach(skill => { %>
+                <span class="badge bg-light text-dark me-1 mb-1 skill-badge"><%= skill %></span>
+              <% }) %>
+            <% } else { %>
+              <div class="text-muted small">Chưa có kỹ năng</div>
+            <% } %>
+          </div>
+
+          <% if (member.extra && member.extra.languages) { %>
+            <hr class="my-3">
+            <h6 class="mb-1">Ngôn ngữ</h6>
+            <div class="small text-muted">
+              <%= member.extra.languages.join(' • ') %>
+            </div>
+          <% } %>
+
+        </div>
+      </div>
+
+      <!-- Right: nội dung chi tiết -->
+      <div class="col-lg-8 col-md-7 p-4">
+        <div class="mb-3">
+          <h5 class="fw-bold">Giới thiệu</h5>
+          <p class="lead mb-0"><%= member.bio %></p>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h6>Vai trò & trách nhiệm</h6>
+            <p class="small text-muted mb-0"><%= member.responsibilities || 'Không có' %></p>
+          </div>
+          <div class="col-md-6">
+            <h6>Trạng thái</h6>
+            <p class="small text-muted mb-0"><%= (member.extra && member.extra.available) || 'Không xác định' %></p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h5 class="fw-bold">Dự án tiêu biểu</h5>
+        <% if (member.projects && member.projects.length) { %>
+          <div class="row g-3">
+            <% member.projects.forEach(p => { %>
+              <div class="col-12">
+                <div class="project-item p-3 border rounded">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                      <strong><%= p.title %></strong>
+                      <p class="mb-1 small text-muted"><%= p.desc %></p>
+                    </div>
+                    <% if (p.link) { %>
+                      <a href="<%= p.link %>" target="_blank" rel="noreferrer" class="small">Xem</a>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        <% } else { %>
+          <p class="text-muted small">Chưa có dự án nào.</p>
+        <% } %>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Học vấn</h6>
+            <p class="small text-muted"><%= member.education || 'Không có' %></p>
+          </div>
+          <div class="col-md-6">
+            <h6>Liên hệ</h6>
+            <p class="small text-muted mb-0">
+              <% if (member.phone) { %>Điện thoại: <%= member.phone %><br><% } %>
+              <% if (member.email) { %>Email: <%= member.email %><% } %>
+            </p>
+          </div>
+        </div>
+
+        <% if (member.quote) { %>
+          <hr>
+          <blockquote class="blockquote small text-muted mb-0">
+            “<%= member.quote %>”
+          </blockquote>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

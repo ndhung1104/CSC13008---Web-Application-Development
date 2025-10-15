@@ -1,0 +1,8 @@
+- [x] Clarify Project Requirements: Đã xác định yêu cầu xây dựng WebApp Node.js Express giới thiệu nhóm môn học Web, có các route /about-my-team, /about-member1, /about-member2, áp dụng CSS, xóa node_modules trước khi nộp.
+- [x] Scaffold the Project: Đã tạo cấu trúc project, file cấu hình, mã nguồn, view, public, README.md, .gitignore.
+- [x] Customize the Project: Đã thêm nội dung giới thiệu nhóm, thành viên, CSS hiện đại.
+- [x] Install Required Extensions: Không yêu cầu extension đặc biệt.
+- [x] Compile the Project: Đã cài đặt dependencies và kiểm tra không lỗi.
+- [x] Create and Run Task: Đã tạo task tự động chạy ứng dụng.
+- [x] Launch the Project: Đã chạy thử ứng dụng thành công.
+- [x] Ensure Documentation is Complete: README.md đã có hướng dẫn, copilot-instructions.md đã cập nhật tiến độ.

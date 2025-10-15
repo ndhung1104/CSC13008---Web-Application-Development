@@ -1,0 +1,13 @@
+<div class="col-sm-6">
+  <a href="/team/<%= member.id %>" class="text-decoration-none text-dark">
+    <div class="card text-center border-0 bg-light h-100">
+      <div class="card-body px-4 py-4">
+        <div class="mb-4 mx-2 mx-md-5">
+          <img class="img-fluid rounded-circle member-photo" src="<%= member.photo %>" alt="<%= member.name %>">
+        </div>
+        <h5 class="fw-bold"><%= member.name %></h5>
+        <div class="text-muted"><%= member.role %></div>
+      </div>
+    </div>
+  </a>
+</div>

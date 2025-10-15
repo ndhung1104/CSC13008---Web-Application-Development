@@ -1,0 +1,30 @@
+[
+  {
+    "id": "nguyen-dang-hung", 
+    "name": "Nguyễn Đăng Hưng",
+    "role": "Dev",
+    "photo": "/img/a.jpg",
+    "bio": "Sinh viên năm 3 ngành Công nghệ thông tin. Đam mê xây dựng frontend, backend và DevOps.",
+    "email": "ndhung23@clc.fitus.edu.vn",
+    "phone": "+84 834 278 613",
+    "linkedin": "https://www.linkedin.com/in/hung-nguyen-dang-325a35323/",
+    "github": "https://github.com/ndhung1104",
+    "location": "Hồ Chí Minh, Việt Nam",
+    "skills": ["Node.js", "Express", "SQL", "Docker", "Git", "Python", "C++", "Java"],
+    "projects": [
+      { "title": "Remote Computer Control System (Computer Networking)",
+        "desc": "Hệ thống điều khiển máy tính từ xa qua email trong mạng LAN — server thực thi lệnh, client gửi lệnh qua email, gồm shutdown, reset, chụp màn hình, quản lý tiến trình, webcam, sao chép/xóa file.",
+        "link": "https://github.com/ndhung1104/CSC10008_ComputerNetworking" },
+      { "title": "CSC10003 – Object Oriented Programming Assignments",
+  "desc": "Bộ bài tập OOP với các chủ đề: lớp & UML, constructor/destructor & operator overloading, kế thừa, đa hình, exception handling và design patterns.",
+  "link": "https://github.com/ndhung1104/CSC10003_ObjectOrientedProgramming"}
+    ],
+    "education": "Đại học Khoa Học Tự Nhiên — Khoa CNTT (2023 – nay)",
+    "responsibilities": "Thiết kế backend, cấu trúc dữ liệu, deploy ứng dụng.",
+    "quote": "Luôn ưu tiên code rõ ràng hơn code nhanh.",
+    "extra": {
+      "languages": ["Tiếng Anh (IELTS 7.0)"],
+      "available": "Part-time"
+    }
+  }
+]

@@ -1,0 +1,99 @@
+/* ---------- Base ---------- */
+/* phông chữ mặc định */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #fff;
+}
+body.team-page {
+  background: linear-gradient(180deg, #f0f5ff 0%, #ffffff 100%);
+}
+/* ---------- Cards ---------- */
+.card {
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* card kiểu bg-light (từ Bootstrap) — thêm hiệu ứng hover */
+.card.bg-light {
+  border-radius: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card.bg-light:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- Photos (support cả 2 tên class) ---------- */
+/* Chuẩn hoá: .profile-photo là tên chính, nhưng .member-photo vẫn được hỗ trợ */
+.member-photo,
+.profile-photo {
+  width: 160px;               /* default for desktop */
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  display: inline-block;
+  background: #eee;
+}
+
+/* nếu bạn muốn avatar nhỏ hơn (trong grid list), ghi đè bằng .member-photo.small hoặc inline style */
+.member-photo.small {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ---------- Text / Spacing ---------- */
+.display-5 { line-height: 1.05; }
+.lead { color: #666; }
+
+/* ---------- Skill badges ---------- */
+.skill-badge {
+  font-size: .78rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #fff;
+  color: #333;
+  padding: 0.28rem 0.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+}
+
+/* ---------- Project item ---------- */
+.project-item {
+  background: #fafafa;
+  border: 1px solid rgba(0,0,0,0.04);
+  padding: 0.9rem;
+  border-radius: 8px;
+}
+
+/* ---------- Links / Buttons ---------- */
+a.btn-link { text-decoration: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  /* giảm avatar 1 chút trên tablet */
+  .member-photo,
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* avatar nhỏ hơn trên điện thoại */
+  .member-photo,
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+
+  /* card padding / text scale có thể được thay đổi nếu cần */
+  .lead { font-size: 0.98rem; }
+}
